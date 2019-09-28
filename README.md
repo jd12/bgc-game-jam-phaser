@@ -140,3 +140,28 @@ Now let's make the player actually move across the screen when we press the arro
 ![Moving Update](images/moving_update.png)
 
 You should now be able to move left and right. Update your code so that you can move up and down (Remember that moving up and down means changing the y position of your player instead of the x).
+
+## Adding Enemies
+
+Let's add enemies to our game. 
+
+First, we need to update our `preload()` function 
+
+![Enemy Preload](images/enemy_preload.png)
+
+Then we'll update our create function so that we set up our enemies in the game. 
+
+![Enemy Create](images/enemies_create.png)
+
+Then we'll create a function that lets us create enemies randomly. You can copy and paste the below code at the bottom of your `game.js` file.
+
+```js
+function createEnemies() {
+	var enemy = enemies.create(
+(Math.random() * game.world.width), ((Math.random() * game.world.height) - 32), 'baddie');
+}
+```
+
+You should be able to Run your game and when you click on the screen, you should see a pigcat pop up. 
+
+![Enemy Create](images/enemy_onscreen.png)
