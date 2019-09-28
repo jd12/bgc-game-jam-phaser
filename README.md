@@ -165,3 +165,21 @@ function createEnemies() {
 You should be able to Run your game and when you click on the screen, you should see a pigcat pop up. 
 
 ![Enemy Create](images/enemy_onscreen.png)
+
+Let's now update our create function with a for loop to create 10 enemies. 
+
+![For Loop Create Enemies](images/for_loop_create_enemies.png)
+
+## Colliding with enemies
+
+First, we need to create a function that will make our enemy disappear when we collide with them. Let's create a `collideWithEnemy` function at the bottom of your `game.js` file
+
+
+![Collide With Enemy](images/collideWithEnemy.png)
+
+Now we need to update our `update` function to be able to detect our collisions. 
+
+![Collide With Enemy](images/update_with_collisions.png)
+
+You should now be able to collide with enemies and have them disappear.
+
