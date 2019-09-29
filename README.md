@@ -248,3 +248,26 @@ Now you should be able to collect the pigcats and see your score/HP update.
 
 ![Updated Score HP](images/score_hp_updated_display.png)
 
+## Intro / End Screens
+
+The final steps is to add an intro screen and end screen for the user. Let's start with the intro screen. 
+
+This will be similar to our `scoreText` and `hitPointsText` except it will be visible at the beginning and disappear when you start the game.
+
+First, we need to update our global variables. 
+
+![Intro Text Variable](images/introText_variable.png)
+
+Then our `create` function
+
+![Intro Text Create](images/introText_create.png)
+
+Finally, our `startGame` function
+
+![Intro Text StartGame](images/introText_startGame.png)
+
+You should see the Click to Start! message initially and then have it a disappear when you click the game.
+
+ ![Intro Text Display](images/click_to_start_display.png)
+ 
+ 
