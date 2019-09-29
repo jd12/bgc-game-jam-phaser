@@ -183,3 +183,68 @@ Now we need to update our `update` function to be able to detect our collisions.
 
 You should now be able to collide with enemies and have them disappear.
 
+## Switching enemy states
+
+Now let's make it so the enemies switch back and forth. 
+
+First, let's set up a function to switch the enemy state.
+
+![Switch Enemy State](images/switchEnemyState.png)
+
+So if our `enemies.safe` is `true` it will be set to `false` and if it's `false`, it will be set to `true`.
+
+We could put our `switchEnemyState` in our update function but then our enemies would switch every millisecond. We need to set up a custom timer so that we can have more control of when our `switchEnemyState` function is called. Let's update our `startGame` to create a custom timer.
+
+![Start Game Timer](images/startGame_timer.png)
+
+Now our `switchEnemyState` will be called every 1000 milliseconds (1 second).
+
+## Enemy Animations
+Now, we need to add animations that utilizes our `switchEnemy` to change the color of the enemy based of whether `enemies.safe` is set to `true` or `false`.
+
+First, let's update our create enemies to have a place to store or animations.
+
+![Create Enemies Animation](images/createEnemies_animations.png)
+
+Then update our `update` **INSIDE** the if statement for `gameStarted` to play our animations.
+
+![Update Enemies Animation](images/update_enemy_animations.png) 
+
+You should now see the enemies switch between pink and neon green after clicking in the screen.
+
+![Enemy Neon Green](images/enemy_neon_green.png) 
+
+## Score and Hit Points
+
+Now we need to set up our game so that when the player hits a pigcat when their neon green the player's score increases but if the player hits a pigcat when they're pink they lose hit points(similar to Pac-Man). 
+
+Let's set up some variables to store these values at the top of our file.
+
+![Score Variables](images/score_variables.png) 
+
+Then we want to add them to the game but not display them until the user starts the game. Let's update the `create` method to add the text to screen but make them invisible to the user.
+
+![Create Score HP](images/create_score_hp.png)
+
+Now let's display them to the user with some default values when the game starts. We need to update our `startGame` like so:
+
+![Start Game Score Variables](images/startGame_score.png)
+
+And then update our `update` function to display those initial values.
+
+![Update Score HP](images/update_score_hp.png)
+
+You should now see the base score and HP when you start the game. 
+
+![Update Score HP](images/score_hp_display.png)
+
+You'll notice the score and HP is over the player. After you finish the game, I encourage you to tweak the position values to make your game look better.
+
+Now let's update our `collideWithEnemy` so that the text will update will update appropriately when we collide with the pigcats.
+
+![Collide With Enemy Score HP](images/collideWithEnemy_score_hp.png)
+
+Now you should be able to collect the pigcats and see your score/HP update.
+
+![Updated Score HP](images/score_hp_updated_display.png)
+
