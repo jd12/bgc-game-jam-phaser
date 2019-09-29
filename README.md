@@ -268,6 +268,21 @@ Finally, our `startGame` function
 
 You should see the Click to Start! message initially and then have it a disappear when you click the game.
 
- ![Intro Text Display](images/click_to_start_display.png)
+![Intro Text Display](images/click_to_start_display.png)
  
+### End Screen
+
+Now let's get our end screen set up. First, let's write a `loseState` function that we'll trigger when the player runs out of hit points. 
+
+![Lose State](images/loseState.png)
  
+## Congratulations 
+
+Congratulations, you've now built a few game. Take some time to play it and then tackle the below challenges. 
+
+### Challenges
+
+- Set up a `winState` similar to `loseState` that triggers when `enemies.length === 0 &&& hitPoints > 0`
+- Fix the positioning of the text and the player
+- Have the enemies move around to make the game more challenging
+- Add a power-up that when you run into it increases your speed. 
